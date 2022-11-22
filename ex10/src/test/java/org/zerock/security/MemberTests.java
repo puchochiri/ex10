@@ -80,7 +80,7 @@ public class MemberTests {
 	
 	}
 */	
-/*	
+	
 	@Test
 	public void testInsertAuth() {
 		
@@ -117,10 +117,10 @@ public class MemberTests {
 			} finally {
 				if(pstmt != null) {try { pstmt.close(); } catch(Exception e) {} }
 				if(con != null) {try { con.close(); } catch(Exception e) {} }
-			}
+			} 
 			
 		}//end for
 		
 	}
-*/
+
 }
