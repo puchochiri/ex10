@@ -1,5 +1,11 @@
 02. OracleSQL
 
+cmd: 
+sqlplus
+Enter user-name: sys as sysdba
+Enter Password:
+
+
 1. 계정 이름 등록  BOOK_EX, 기본 테이블 스페이스,임시 테이블 스페이스 지정
 CREATE USER book_ex IDENTIFIED BY book_ex
 DEFAULT TABLESPACE USERS
