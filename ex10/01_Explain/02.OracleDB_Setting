@@ -29,4 +29,29 @@ exec dbms_xdb.sethttpport(9090);
 7. 연결 여부 JUnit Test 할 것 (JDBCTests.java)
 	INFO : org.zerock.persistence.JDBCTests - oracle.jdbc.driver.T4CConnection@58ceff1
 	
-	
+
+other-------------------------------------
+
+SQL*Plus: Release 11.2.0.2.0 Production on 수 10월 18 19:52:58 2023
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+SQL> select instance From v$thread;
+SP2-0640: Not connected
+SQL> conn scott;
+Enter password:
+Connected.
+SQL> select instance FROM v$thread;\
+  2  select instance FROM v$thread;
+select instance FROM v$thread;\
+                             *
+ERROR at line 1:
+ORA-00911: invalid character
+
+
+SQL> select instance FROM v$thread;
+
+INSTANCE
+--------------------------------------------------------------------------------
+xe
+
