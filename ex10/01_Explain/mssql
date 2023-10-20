@@ -1,1 +1,29 @@
-123
+
+
+
+CREATE TABLE tbl_board_ysw (
+	bno numeric(18,0) NOT NULL,
+	autoincrement numeric(18,0) NOT NULL,
+	title nvarchar(200) COLLATE Korean_Wansung_CI_AS NOT NULL,
+	content nvarchar(200) COLLATE Korean_Wansung_CI_AS NOT NULL,
+	writer nvarchar(200) COLLATE Korean_Wansung_CI_AS NULL,
+	regdate datetime NULL,
+	updatedate datetime DEFAULT getdate() NULL,
+	CONSTRAINT PK__tbl_boar__DE97B9884502A0C0 PRIMARY KEY (bno)
+);
+
+ALTER TABLE tbl_board_ysw  ADD CONSTRAINT bno_pk PRIMARY KEY (rno); 
+
+
+create table tbl_reply_ysw (
+
+    rno numeric(10,0) not null,
+    bno numeric(10,0) not null,
+    reply nvarchar(1000) not null,
+    replyer nvarchar(50) not null,
+    replyDate datetime default getdate(),
+    updateDate datetime default getdate()
+    
+);
+
+ALTER TABLE tbl_reply_ysw  ADD CONSTRAINT RNO_PK PRIMARY KEY (rno); 
